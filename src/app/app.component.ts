@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {COURSES} from '../db-data';
+import { CourseCardComponent } from './course-card/course-card.component';
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +10,11 @@ import {COURSES} from '../db-data';
 })
 export class AppComponent {
 
+  courses = COURSES;
 
+ OnCourseViewed(course:Course)
+ {
+   console.log(course)
+ }
 
 }
